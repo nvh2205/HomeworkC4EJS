@@ -28,48 +28,37 @@
 
 // //4..................................
 // const items=['Jean','T-Shirt','Socks'];
-// var char=prompt('Hi there, welcom to shop admin panel - what do you want(C,R,U,D)?').toUpperCase();
-// switch(char){
-//     case 'R':
+// while(true){
+//     var char=prompt('Hi there, welcom to shop admin panel - what do you want(C,R,U,D)?').toUpperCase();
+//     if(char ==='R'){
 //         console.log('The current items are: ');
 //         for(let i=0;i<items.length;i++){
-//         console.log(`${i + 1}. ${items[i]}`);
+//             console.log(`${i + 1}. ${items[i]}`);
 //         }
 //         break;
-//     case 'C':
+//     }
+//     else if(char==='C'){
 //         var newItem=prompt('Enter the name of the new item:')
 //         alert('Done');
 //         items.push(newItem);
-//         console.log('The current items are: ');
-//         for(let i=0;i<items.length;i++){
-//         console.log(`${i + 1}. ${items[i]}`);
-//         }
-//         break;
-//     case 'U':
-//         var position=Number(prompt('Enter the position you want to update: '));
-//         let newItem2 = prompt('Enter the new name');
-//         alert('Done');
-//         items.splice(position-1,0,newItem2);
-//         console.log('The current items are: ');
-//         for(let i=0;i<items.length;i++){
-//         console.log(`${i + 1}. ${items[i]}`);
-//         }
-//         break;
-//     case 'D':
+//     }
+//     else if(char === 'U'){
+//             var position=Number(prompt('Enter the position you want to update: '));
+//             let newItem2 = prompt('Enter the new name');
+//             alert('Done');
+//             items.splice(position-1,0,newItem2);
+//     }
+//     else if(char === 'D'){
 //         var positionDelete= Number(prompt('Enter the position you want to delete: '));
 //         alert('Done');
 //         items.splice(positionDelete-1,1);
-//         char=prompt('Hi there, welcom to shop admin panel - what do you want(C,R,U,D)?').toUpperCase();
-//         console.log('The current items are: ');
-//         for(let i=0;i<items.length;i++){
-//         console.log(`${i + 1}. ${items[i]}`);
-//         }
-//         break;
+//     }
 
-//     default:
+//     else{
 //         alert('This command');
 //         break;
 
+//     }
 // }
 
 //5......................................
@@ -188,13 +177,13 @@
 
 
 //11........................................................................
-var arr = (prompt('Enter a sequence of number: '));
-arr=arr.split(',');
+// var arr = (prompt('Enter a sequence of number: '));
+// arr=arr.split(',');
 
-var Odd=arr.filter(function(items){
-    if(items%2===1){
-        return items;
-    }
-})
+// var Odd=arr.filter(function(items){
+//     if(items%2===1){
+//         return items;
+//     }
+// })
 
-alert(`${arr} => ${Odd}`);
+// alert(`${arr} => ${Odd}`);
