@@ -40,6 +40,7 @@
 
 // while(true){
 //     let keyword=prompt("Enter a keyword: ").toLowerCase();
+        
 //     if(Object.keys(dictionary).includes(keyword)==true){
 //         alert(`${keyword} \n ${dictionary[keyword]}`);
 //         break;
