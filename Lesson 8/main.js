@@ -78,10 +78,12 @@
 
 
 //12..........................
-let items =[
+const items =[
     'Backpack',
     'MiBand watch',
-    'Ring'
+    'Ring',
+    'Ring1',
+    'Ring2',
 ];
 
 console.log(items);
@@ -93,7 +95,7 @@ console.log(ulElement);
 
 ulElement.removeChild(liElement[0]);
 ulElement.removeChild(liElement[0]);
-let i=0;
+//let i=0;
 for(let value of items){
     ulElement.innerHTML+=`<li><span>${value}</span> <button class="Remove">Remove</button> </li>`;
    // ulElement.innerHTML+=`<li><button>Remove</button></li>`;
@@ -127,12 +129,25 @@ let Remove=document.getElementsByClassName('Remove');
 let SpanElement=document.getElementsByTagName('span');
 
 
-for(let index in items){
-    Remove[index].addEventListener('click',function(){
-        console.log('Remove');
-        items.splice(index,1);
-        console.log(items);
-        ulElement.removeChild(liElement[index]);
+
+
+
+
+Array.from(Remove).forEach(function(element){
+    
+    element.addEventListener('click',function(){
+        let p=element.parentElement;
+        //Truy cập riêng thẻ span 
+        let p1=p.querySelector('span');
+        for(let index in items){
+            if(items[index]===p1.innerHTML){
+                items.splice(index,1);
+                console.log(items);
+            }
+        }
+        ulElement.removeChild(p);
     })
-}
+    
+})
+
 
