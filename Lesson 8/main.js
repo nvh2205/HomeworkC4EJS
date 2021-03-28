@@ -102,7 +102,7 @@ for(let value of items){
 }
 
 let inputElement=document.getElementById('my-input');
-console.log(inputElement);
+console.log(inputElement.value);
 let buttonElement=document.getElementById('my-button');
 
 function add(){
@@ -121,6 +121,7 @@ buttonElement.addEventListener('click',function(){
 
 buttonElement.addEventListener('click',add);
 
+
 let Remove=document.getElementsByClassName('Remove');
 
 
@@ -131,23 +132,25 @@ let SpanElement=document.getElementsByTagName('span');
 
 
 
-
-
-Array.from(Remove).forEach(function(element){
-    
-    element.addEventListener('click',function(){
-        let p=element.parentElement;
-        //Truy cập riêng thẻ span 
-        let p1=p.querySelector('span');
-        for(let index in items){
-            if(items[index]===p1.innerHTML){
-                items.splice(index,1);
-                console.log(items);
+function remove(Remove){
+    return Array.from(Remove).forEach(function(element){
+        console.log(element);
+        element.addEventListener('click',function(){
+            
+            let p=element.parentElement;
+            //Truy cập riêng thẻ span 
+            let p1=p.querySelector('span');
+            for(let index in items){
+                if(items[index]===p1.innerHTML){
+                    items.splice(index,1);
+                    console.log(items);
+                }
             }
-        }
-        ulElement.removeChild(p);
+            ulElement.removeChild(p);
+        })
+        
     })
-    
-})
+}
+
 
 

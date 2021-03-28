@@ -1,0 +1,42 @@
+.header{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.option{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card{
+    height: 500px;    
+    position: relative;
+}
+
+.header1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.line{
+    
+    height: 6px;
+    border-radius: 15px;
+    background-color: #c23564;
+    transition: all 0.2s ease;
+}
+
+#h1{
+    display: flex;
+    justify-content: center;
+}
+#myRange{
+    width: 100%;
+
+}
+.css{
+    opacity: 1;
+    background-color: rgba(191, 53, 100, 0.05);
+    border-color: rgba(191, 53, 100, 0.1);
+}
