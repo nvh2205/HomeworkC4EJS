@@ -35,8 +35,9 @@
     width: 100%;
 
 }
+
 .css{
     opacity: 1;
-    background-color: rgba(191, 53, 100, 0.05);
+    background-color: rgba(85, 10, 35, 0.05);
     border-color: rgba(191, 53, 100, 0.1);
 }
