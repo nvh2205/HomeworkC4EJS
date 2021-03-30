@@ -123,7 +123,7 @@ function player(clickElemnt){
             }
             
             if(index==1){     
-                if((x+y)==result){
+                if((x+y)==result ){
                     check++;                   
                 }
                 else{                   
