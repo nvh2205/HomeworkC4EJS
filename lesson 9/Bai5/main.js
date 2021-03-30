@@ -7,9 +7,9 @@ function getRandom(min, max) {
 
 let score=document.querySelector('.score');
 console.log(score)
-let x= getRandom(-1000,1000);
-let y= getRandom(-1000,1000);
-let result=getRandom(-1000,1000);
+let x= getRandom(-1,1);
+let y= getRandom(-1,1);
+let result=getRandom(-2,2);
 let check=0;
 
 let clickElemnt=document.querySelectorAll('.click');
@@ -85,15 +85,20 @@ function clickTimer(set){
 clickTimer(time);
 
 
+
+
+
+
 function player(clickElemnt){
     Array.from(clickElemnt).forEach(function(element,index){
         
         element.onclick=function(){
 
-            let x= getRandom(-1000,1000);
-            let y= getRandom(-1000,1000);
-            let result=getRandom(-1000,1000);
-            content.innerHTML = `<h4> ${x} + ${y} = ${result} </h4>`
+            // let x= getRandom(-1,1);
+            // let y= getRandom(-1,1);
+            // let result=getRandom(-2,2);
+            //let x=0, y=0,result=0;
+            //content.innerHTML = `<h4> ${x} + ${y} = ${result} </h4>`
             // if(settingTimer.checked){
             //     a=setInterval(function(){
             //         timer.innerHTML=`<input disabled type="range" min="1" max="100" value="${time--}" class="slider" id="myRange">`
@@ -108,13 +113,15 @@ function player(clickElemnt){
             //     timer.innerHTML=``;
             //     clearInterval(a);
             // }
-            
+
+            console.log(x,y,result);
+            //console.log(a,b,c);
             if(time==1){
                 let b=setInterval(function(){
                     timer.innerHTML=`<input disabled type="range" min="1" max="100" value="${time--}" class="slider" id="myRange">`
                 },100);
             }
-
+            
             if(index==1){     
                 if((x+y)==result){
                     check++;                   
@@ -137,6 +144,15 @@ function player(clickElemnt){
             time=100;
             clickScore(settingScore);
             showScore();
+            content.innerHTML = `<h4> ${x} + ${y} = ${result} </h4>`
+            let a= getRandom(-1,1);
+            let b= getRandom(-1,1);
+            let c=getRandom(-2,2);
+             x=a;
+             y=b;
+             result=c;
+             console.log(a,b,c);
+             content.innerHTML = `<h4> ${x} + ${y} = ${result} </h4>`
         }
     })
 }

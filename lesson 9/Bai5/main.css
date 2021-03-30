@@ -12,7 +12,10 @@
 .card{
     height: 500px;    
     position: relative;
+    
 }
+
+
 
 .header1{
     display: flex;
